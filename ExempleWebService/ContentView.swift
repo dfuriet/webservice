@@ -31,10 +31,8 @@ struct ContentView: View {
         }
     }
     
-    
     func loadUserList() {
         guard let userListApiUrl = URL(string: "https://jsonplaceholder.typicode.com/users") else { return  }
-        
         
         URLSession.shared.dataTask(with: userListApiUrl) { data, response, error in
             if let data = data {
@@ -49,9 +47,6 @@ struct ContentView: View {
                 }
             }
         }.resume()
-       
-        
-    
     }
 }
 
